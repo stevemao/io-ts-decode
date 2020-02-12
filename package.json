@@ -1,0 +1,44 @@
+{
+  "name": "io-ts-decode",
+  "version": "1.0.0",
+  "description": "Decode with error to reduce boilerplate",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --declaration --outDir lib index.ts",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevemao/io-ts-decode.git"
+  },
+  "keywords": [
+    "decode",
+    "fp-ts",
+    "io-ts",
+    "error"
+  ],
+  "author": "Steve Mao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevemao/io-ts-decode/issues"
+  },
+  "homepage": "https://github.com/stevemao/io-ts-decode#readme",
+  "peerDependencies": {
+    "fp-ts": "^2.4.4",
+    "io-ts": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "fp-ts": "^2.4.4",
+    "io-ts": "^2.1.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "to-error": "^1.0.2"
+  }
+}

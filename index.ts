@@ -7,6 +7,13 @@ const decode = <N>(
   T: t.Decoder<unknown, N>,
   data: unknown,
 ): TE.TaskEither<Error, N> =>
-  pipe(TE.fromEither(T.decode(data)), TE.mapLeft(toError));
+  pipe(
+    pipe(
+      data,
+      T.decode,
+      TE.fromEither
+    ),
+    TE.mapLeft(toError)
+  );
 
 export default decode;

@@ -8,11 +8,9 @@ const decode = <N>(
   data: unknown,
 ): TaskEither<Error, N> =>
   pipe(
-    pipe(
-      data,
-      T.decode,
-      fromEither
-    ),
+    data,
+    T.decode,
+    fromEither,
     mapLeft(toError)
   );
 

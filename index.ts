@@ -3,9 +3,9 @@ import { TaskEither, fromEither, mapLeft } from 'fp-ts/lib/TaskEither';
 import { Decoder } from 'io-ts';
 import toError from 'to-error';
 
-const decode = <N>(
-  T: Decoder<unknown, N>,
-  data: unknown,
+const decode = <N, M>(
+  T: Decoder<M, N>,
+  data: M,
 ): TaskEither<Error, N> =>
   pipe(
     data,

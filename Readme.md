@@ -11,6 +11,6 @@ const onRight = (s: string) => `No errors: ${s}`
 
 pipe(
     ioTsDecode(t.string, null),
-    ... // compose with other taskEithers
+    ... // compose with other `TaskEither`s
 )
 ```
